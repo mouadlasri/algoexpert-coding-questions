@@ -13,6 +13,14 @@
 #   the target sum.
 
 def twoNumberSum(array, targetSum):
-    # Write code here
-    pass
+    # check if array is empty
+    if not array:
+        return []
+    
+    for i in range(len(array)):
+        for j in range(i, len(array)):
+            if array[i] + array[j] == targetSum and i != j:
+                return [array[i], array[j]]
+            
+    return []
 
