@@ -12,15 +12,18 @@
 #   You can assume that there will be at most one pair of numbers summing up to
 #   the target sum.
 
+
+# O(n) time | O(n) space
 def twoNumberSum(array, targetSum):
-    # check if array is empty
-    if not array:
-        return []
-    
-    for i in range(len(array)):
-        for j in range(i, len(array)):
-            if array[i] + array[j] == targetSum and i != j:
-                return [array[i], array[j]]
+    seenTracker = {}
+
+    for num in array:
+        potentialMatch = targetSum - num # x + y = targetsum => y = targetSum - x (x: num)
+        if potentialMatch in seenTracker:
+            return [potentialMatch, num]
+        else:
+            # add the num to the dictionary
+            seenTracker[num] = True
             
     return []
 
