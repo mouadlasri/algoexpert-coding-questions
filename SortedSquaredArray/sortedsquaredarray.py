@@ -8,5 +8,22 @@
 
 def sortedSquarredArray(array):
     # Write your code here
-    
-    return []
+    if(not array):
+        return
+  
+    res = []
+    # get first element squared and push it to res
+    for index in range(0, len(array)):
+        smallest = min(array)
+        largest = max(array)
+
+        if(abs(largest) > abs(smallest)):
+            square = largest * largest
+        else:
+            square = smallest * smallest
+
+        res.insert(0, square)
+        
+        array.pop(array.index(largest))
+        
+    return res
