@@ -27,3 +27,12 @@ def sortedSquarredArray(array):
         array.pop(array.index(largest))
         
     return res
+
+
+# Hint
+
+#   Use two pointers to keep track of the smallest and largest values in the input
+#   array. Compare the absolute values of these smallest and largest values,
+#   square the larger absolute value, and place the square at the end of the
+#   output array, filling it up from right to left. Move the pointers accordingly,
+#   and repeat this process until the output array is filled.
