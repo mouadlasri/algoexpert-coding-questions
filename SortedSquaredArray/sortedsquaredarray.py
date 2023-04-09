@@ -6,34 +6,24 @@
 # sample input = [1, 2, 3, 5, 6, 8, 9]
 # sample output = [1, 4, 9, 25, 36, 64, 81]
 
-def sortedSquarredArray(array):
+def sortedSquaredArrayBruteforce(array):
+
+    
     # Write your code here
     if(not array):
         return
-  
+    
     res = []
-    # get first element squared and push it to res
-    for index in range(0, len(array)):
-        smallest = min(array)
-        largest = max(array)
+    for element in array:
+        res.append(element**2)
 
-        if(abs(largest) > abs(smallest)):
-            square = largest * largest
-        else:
-            square = smallest * smallest
+    sortedArray = sorted(res)
+    return sortedArray
 
-        res.insert(0, square)
-        
-        array.pop(array.index(largest))
-        
-    return res
+input = [1, -62, 3, 5, 6, 8, 9]
+sorted = sortedSquaredArrayBruteforce(input)
+print(sorted)
 
-
-# Hint
-
-#   Use two pointers to keep track of the smallest and largest values in the input
-#   array. Compare the absolute values of these smallest and largest values,
-#   square the larger absolute value, and place the square at the end of the
-#   output array, filling it up from right to left. Move the pointers accordingly,
-#   and repeat this process until the output array is filled.
-#  Try again
+# Brute force method
+# Generate all squares of the input array, then sort the array
+# Time complexity O(nlogn), space ccomplexity O(n)
