@@ -27,3 +27,10 @@ def twoNumberSum(array, targetSum):
             
     return []
 
+
+target = [3, 5, -4, 8, 11, 1, -1, 6]
+targetSum = 10
+
+result = twoNumberSum([3, 5, -4, 8, 11, 1, -1, 6], 10) # [11, -1]
+
+print(result)
