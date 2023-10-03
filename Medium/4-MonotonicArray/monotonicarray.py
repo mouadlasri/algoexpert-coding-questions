@@ -19,7 +19,7 @@ def isMonotonic(array):
 
     for i in range(1, len(array)):
         if array[i] < array[i-1]:
-            IsNonDecreasing = False
+            isNonDecreasing = False
         if array[i] > array[i-1]:
             isNonIncreasing = False
 
