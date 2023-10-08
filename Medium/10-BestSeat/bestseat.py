@@ -32,7 +32,7 @@ def bestSeat(seats):
         right = left + 1
 
         # find the range of empty seats starting from left seat until we hit an occupied seat (= 1)
-        while right < len(seats) and seats[right] == 0: # find 
+        while right < len(seats) and seats[right] == 0: # find the rightmost empty seat in the range
             right += 1
 
         availableSpace = right - left - 1 # -1 because we don't want to count the occupied seat  
