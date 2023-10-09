@@ -18,5 +18,21 @@
 # 2 # 2 appears in 4 out of 7 indices (4/7) in the array, and 4 is more than 7/2 = 3, making it the majority element
 
 def majorityElement(array):
-    # Write your code here.
-    pass
+    count = 0
+    candidate = None # candidate is the majority element in the array 
+
+    for num in array: 
+        # if count is 0, then we have a new candidate 
+        # because we have seen the current candidate the same amount of times as we have seen other elements 
+        if count == 0:  # also handles the initial case where count is 0 and candidate is None
+            candidate = num 
+
+        # if the current number is the same as the candidate, then we increment the count 
+        # because we have seen the candidate more times than we have seen other elements 
+        if num == candidate:
+            count += 1 
+            
+        # if the current number is not the same as the candidate, then we decrement the count
+        # because we have seen the candidate the same amount of times as we have seen other elements
+        else:
+            count -= 1
