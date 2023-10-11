@@ -10,8 +10,8 @@
 #  left; its value is less than or equal to the values of every node to its right;
 #  and its children nodes are either valid BST nodes themselves or None / null.
 #
-# Sample Input:
-# tree =   10
+#  Sample Input:
+#  tree =   10
 #        /     \
 #       5      15
 #     /   \   /   \
