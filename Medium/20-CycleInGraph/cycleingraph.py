@@ -46,10 +46,10 @@ def cycleInGraph(edges):
 def isNodeInCycle(edges, node, visited, currentlyInStack):
 
     # mark the node as visited and add it to currentlyInStack
-    visited[node] == True
+    visited[node] = True
 
     # add the node to the currentlyInStack array because we are currently doing a DFS on it (and it is part of the current path)
-    currentlyInStack[node] == True
+    currentlyInStack[node] = True
 
     # check the neighbors of this Node
     neighbors = edges[node]
